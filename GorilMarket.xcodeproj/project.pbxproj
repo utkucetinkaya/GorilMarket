@@ -12,6 +12,8 @@
 		B8630FC22AD34E9500C97F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8630FC02AD34E9500C97F73 /* LaunchScreen.storyboard */; };
 		B8630FCC2AD3589300C97F73 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8630FCA2AD3589300C97F73 /* SplashController.swift */; };
 		B8630FCD2AD3589300C97F73 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8630FCB2AD3589300C97F73 /* SplashController.xib */; };
+		B8630FD52AD36A0B00C97F73 /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8630FD32AD36A0B00C97F73 /* OnboardingController.swift */; };
+		B8630FD62AD36A0B00C97F73 /* OnboardingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8630FD42AD36A0B00C97F73 /* OnboardingController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B8630FC32AD34E9500C97F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8630FCA2AD3589300C97F73 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		B8630FCB2AD3589300C97F73 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
+		B8630FD32AD36A0B00C97F73 /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		B8630FD42AD36A0B00C97F73 /* OnboardingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,19 @@
 		B8630FD12AD361AB00C97F73 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B8630FD22AD369F200C97F73 /* OnboardingController */,
 				B8630FC92AD3587800C97F73 /* SplashController */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		B8630FD22AD369F200C97F73 /* OnboardingController */ = {
+			isa = PBXGroup;
+			children = (
+				B8630FD32AD36A0B00C97F73 /* OnboardingController.swift */,
+				B8630FD42AD36A0B00C97F73 /* OnboardingController.xib */,
+			);
+			path = OnboardingController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8630FD62AD36A0B00C97F73 /* OnboardingController.xib in Resources */,
 				B8630FCD2AD3589300C97F73 /* SplashController.xib in Resources */,
 				B8630FC22AD34E9500C97F73 /* LaunchScreen.storyboard in Resources */,
 				B8630FBF2AD34E9500C97F73 /* Assets.xcassets in Resources */,
@@ -177,6 +192,7 @@
 			files = (
 				B8630FCC2AD3589300C97F73 /* SplashController.swift in Sources */,
 				B8630FB62AD34E9300C97F73 /* AppDelegate.swift in Sources */,
+				B8630FD52AD36A0B00C97F73 /* OnboardingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
