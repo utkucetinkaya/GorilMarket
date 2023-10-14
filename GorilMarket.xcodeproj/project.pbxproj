@@ -41,6 +41,10 @@
 		B86310142AD86C1C00C97F73 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86310122AD86C1C00C97F73 /* LoginController.swift */; };
 		B86310152AD86C1C00C97F73 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86310132AD86C1C00C97F73 /* LoginController.xib */; };
 		B86310172ADA1B0300C97F73 /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86310162ADA1B0300C97F73 /* UserDefaults+Ext.swift */; };
+		B88F6B492ADAE9C300DD5596 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B482ADAE9C300DD5596 /* HTTPMethod.swift */; };
+		B88F6B4B2ADAE9E800DD5596 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B4A2ADAE9E800DD5596 /* NetworkService.swift */; };
+		B88F6B4D2ADAE9FA00DD5596 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B4C2ADAE9FA00DD5596 /* Router.swift */; };
+		B88F6B502ADAEA4800DD5596 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B88F6B4F2ADAEA4800DD5596 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,9 @@
 		B86310122AD86C1C00C97F73 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B86310132AD86C1C00C97F73 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		B86310162ADA1B0300C97F73 /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
+		B88F6B482ADAE9C300DD5596 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		B88F6B4A2ADAE9E800DD5596 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B88F6B4C2ADAE9FA00DD5596 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B88F6B502ADAEA4800DD5596 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +120,7 @@
 		B8630FB42AD34E9300C97F73 /* GorilMarket */ = {
 			isa = PBXGroup;
 			children = (
+				B88F6B472ADAE9B100DD5596 /* Service */,
 				B8630FFC2AD435B100C97F73 /* Extension */,
 				B8630FD12AD361AB00C97F73 /* Modules */,
 				B8630FD02AD3619700C97F73 /* Resources */,
@@ -255,6 +264,16 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		B88F6B472ADAE9B100DD5596 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B88F6B482ADAE9C300DD5596 /* HTTPMethod.swift */,
+				B88F6B4A2ADAE9E800DD5596 /* NetworkService.swift */,
+				B88F6B4C2ADAE9FA00DD5596 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,6 +290,9 @@
 			dependencies = (
 			);
 			name = GorilMarket;
+			packageProductDependencies = (
+				B88F6B4F2ADAEA4800DD5596 /* Alamofire */,
+			);
 			productName = GorilMarket;
 			productReference = B8630FB22AD34E9300C97F73 /* GorilMarket.app */;
 			productType = "com.apple.product-type.application";
@@ -299,6 +321,9 @@
 				Base,
 			);
 			mainGroup = B8630FA92AD34E9300C97F73;
+			packageReferences = (
+				B88F6B4E2ADAEA4800DD5596 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B8630FB32AD34E9300C97F73 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,13 +375,16 @@
 				B86310072AD85C9800C97F73 /* OnboardingSlide.swift in Sources */,
 				B86310102AD8661B00C97F73 /* NSObject+Ext.swift in Sources */,
 				B863100D2AD8608500C97F73 /* OnboardingCell.swift in Sources */,
+				B88F6B492ADAE9C300DD5596 /* HTTPMethod.swift in Sources */,
 				B8630FFE2AD435C900C97F73 /* UIView+Ext.swift in Sources */,
 				B86310142AD86C1C00C97F73 /* LoginController.swift in Sources */,
 				B8630FCC2AD3589300C97F73 /* SplashController.swift in Sources */,
 				B86310042AD854D100C97F73 /* UIColor+Ext.swift in Sources */,
 				B8630FB62AD34E9300C97F73 /* AppDelegate.swift in Sources */,
 				B86310172ADA1B0300C97F73 /* UserDefaults+Ext.swift in Sources */,
+				B88F6B4B2ADAE9E800DD5596 /* NetworkService.swift in Sources */,
 				B8630FD52AD36A0B00C97F73 /* OnboardingController.swift in Sources */,
+				B88F6B4D2ADAE9FA00DD5596 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +594,26 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B88F6B4E2ADAEA4800DD5596 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 6.0.0;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B88F6B4F2ADAEA4800DD5596 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B88F6B4E2ADAEA4800DD5596 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8630FAA2AD34E9300C97F73 /* Project object */;
 }
