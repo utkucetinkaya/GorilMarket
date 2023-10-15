@@ -15,4 +15,8 @@ extension UIColor {
     static var secondaryColor: UIColor? {
         return UIColor(named: "SecondaryColor")
     }
+    
+    static var thirdColor: UIColor? {
+        return UIColor(named: "ThirdColor")
+    }
 }
