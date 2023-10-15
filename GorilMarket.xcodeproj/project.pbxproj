@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B82762042ADC5316001278DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B82762032ADC5315001278DB /* GoogleService-Info.plist */; };
+		B82762072ADC540E001278DB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B82762062ADC540E001278DB /* FirebaseAuth */; };
 		B8630FB62AD34E9300C97F73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8630FB52AD34E9300C97F73 /* AppDelegate.swift */; };
 		B8630FBF2AD34E9500C97F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8630FBE2AD34E9500C97F73 /* Assets.xcassets */; };
 		B8630FC22AD34E9500C97F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8630FC02AD34E9500C97F73 /* LaunchScreen.storyboard */; };
@@ -45,9 +47,12 @@
 		B88F6B4B2ADAE9E800DD5596 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B4A2ADAE9E800DD5596 /* NetworkService.swift */; };
 		B88F6B4D2ADAE9FA00DD5596 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B4C2ADAE9FA00DD5596 /* Router.swift */; };
 		B88F6B502ADAEA4800DD5596 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B88F6B4F2ADAEA4800DD5596 /* Alamofire */; };
+		B88F6B582ADB0F2800DD5596 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B572ADB0F2800DD5596 /* PasswordTextField.swift */; };
+		B88F6B5A2ADB121600DD5596 /* LoginSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B592ADB121600DD5596 /* LoginSegmentControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B82762032ADC5315001278DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8630FB22AD34E9300C97F73 /* GorilMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorilMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8630FB52AD34E9300C97F73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8630FBE2AD34E9500C97F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +92,8 @@
 		B88F6B482ADAE9C300DD5596 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B88F6B4A2ADAE9E800DD5596 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B88F6B4C2ADAE9FA00DD5596 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B88F6B572ADB0F2800DD5596 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		B88F6B592ADB121600DD5596 /* LoginSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSegmentControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B88F6B502ADAEA4800DD5596 /* Alamofire in Frameworks */,
+				B82762072ADC540E001278DB /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,13 +128,15 @@
 		B8630FB42AD34E9300C97F73 /* GorilMarket */ = {
 			isa = PBXGroup;
 			children = (
-				B88F6B472ADAE9B100DD5596 /* Service */,
 				B8630FFC2AD435B100C97F73 /* Extension */,
-				B8630FD12AD361AB00C97F73 /* Modules */,
+				B88F6B472ADAE9B100DD5596 /* Service */,
+				B88F6B512ADB0C1F00DD5596 /* Data */,
+				B8630FD12AD361AB00C97F73 /* UI */,
 				B8630FD02AD3619700C97F73 /* Resources */,
 				B8630FCF2AD3619000C97F73 /* App */,
 				B8630FCE2AD3618200C97F73 /* Storyboard */,
 				B8630FC32AD34E9500C97F73 /* Info.plist */,
+				B82762032ADC5315001278DB /* GoogleService-Info.plist */,
 			);
 			path = GorilMarket;
 			sourceTree = "<group>";
@@ -134,8 +144,7 @@
 		B8630FC92AD3587800C97F73 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				B8630FCA2AD3589300C97F73 /* SplashController.swift */,
-				B8630FCB2AD3589300C97F73 /* SplashController.xib */,
+				B88F6B542ADB0CEA00DD5596 /* Controller */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -165,22 +174,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B8630FD12AD361AB00C97F73 /* Modules */ = {
+		B8630FD12AD361AB00C97F73 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				B86310112AD8668C00C97F73 /* Login */,
 				B8630FD22AD369F200C97F73 /* Onboarding */,
 				B8630FC92AD3587800C97F73 /* Splash */,
 			);
-			path = Modules;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		B8630FD22AD369F200C97F73 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				B86310052AD85C8B00C97F73 /* Models */,
 				B86310092AD8605600C97F73 /* View */,
-				B86310082AD8604900C97F73 /* Controller */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -221,14 +228,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B86310052AD85C8B00C97F73 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B86310062AD85C9800C97F73 /* OnboardingSlide.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		B86310082AD8604900C97F73 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +240,7 @@
 		B86310092AD8605600C97F73 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B86310082AD8604900C97F73 /* Controller */,
 				B863100A2AD8606800C97F73 /* Cell */,
 			);
 			path = View;
@@ -258,8 +258,8 @@
 		B86310112AD8668C00C97F73 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B86310122AD86C1C00C97F73 /* LoginController.swift */,
-				B86310132AD86C1C00C97F73 /* LoginController.xib */,
+				B88F6B562ADB0F1100DD5596 /* UIComponent */,
+				B88F6B552ADB0D0E00DD5596 /* Controller */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -272,6 +272,57 @@
 				B88F6B4C2ADAE9FA00DD5596 /* Router.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B88F6B512ADB0C1F00DD5596 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B88F6B532ADB0C3500DD5596 /* Repo */,
+				B88F6B522ADB0C3000DD5596 /* Entity */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B88F6B522ADB0C3000DD5596 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B86310062AD85C9800C97F73 /* OnboardingSlide.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B88F6B532ADB0C3500DD5596 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		B88F6B542ADB0CEA00DD5596 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8630FCA2AD3589300C97F73 /* SplashController.swift */,
+				B8630FCB2AD3589300C97F73 /* SplashController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B88F6B552ADB0D0E00DD5596 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B86310122AD86C1C00C97F73 /* LoginController.swift */,
+				B86310132AD86C1C00C97F73 /* LoginController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B88F6B562ADB0F1100DD5596 /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				B88F6B572ADB0F2800DD5596 /* PasswordTextField.swift */,
+				B88F6B592ADB121600DD5596 /* LoginSegmentControl.swift */,
+			);
+			path = UIComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +343,7 @@
 			name = GorilMarket;
 			packageProductDependencies = (
 				B88F6B4F2ADAEA4800DD5596 /* Alamofire */,
+				B82762062ADC540E001278DB /* FirebaseAuth */,
 			);
 			productName = GorilMarket;
 			productReference = B8630FB22AD34E9300C97F73 /* GorilMarket.app */;
@@ -323,6 +375,7 @@
 			mainGroup = B8630FA92AD34E9300C97F73;
 			packageReferences = (
 				B88F6B4E2ADAEA4800DD5596 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B82762052ADC540E001278DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B8630FB32AD34E9300C97F73 /* Products */;
 			projectDirPath = "";
@@ -345,6 +398,7 @@
 				B8630FED2AD4347800C97F73 /* Poppins-ThinItalic.ttf in Resources */,
 				B8630FF62AD4347800C97F73 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				B863100E2AD8608500C97F73 /* OnboardingCell.xib in Resources */,
+				B82762042ADC5316001278DB /* GoogleService-Info.plist in Resources */,
 				B8630FF02AD4347800C97F73 /* Poppins-Medium.ttf in Resources */,
 				B8630FF72AD4347800C97F73 /* Poppins-Black.ttf in Resources */,
 				B8630FF12AD4347800C97F73 /* Poppins-BoldItalic.ttf in Resources */,
@@ -374,6 +428,7 @@
 			files = (
 				B86310072AD85C9800C97F73 /* OnboardingSlide.swift in Sources */,
 				B86310102AD8661B00C97F73 /* NSObject+Ext.swift in Sources */,
+				B88F6B582ADB0F2800DD5596 /* PasswordTextField.swift in Sources */,
 				B863100D2AD8608500C97F73 /* OnboardingCell.swift in Sources */,
 				B88F6B492ADAE9C300DD5596 /* HTTPMethod.swift in Sources */,
 				B8630FFE2AD435C900C97F73 /* UIView+Ext.swift in Sources */,
@@ -383,6 +438,7 @@
 				B8630FB62AD34E9300C97F73 /* AppDelegate.swift in Sources */,
 				B86310172ADA1B0300C97F73 /* UserDefaults+Ext.swift in Sources */,
 				B88F6B4B2ADAE9E800DD5596 /* NetworkService.swift in Sources */,
+				B88F6B5A2ADB121600DD5596 /* LoginSegmentControl.swift in Sources */,
 				B8630FD52AD36A0B00C97F73 /* OnboardingController.swift in Sources */,
 				B88F6B4D2ADAE9FA00DD5596 /* Router.swift in Sources */,
 			);
@@ -596,6 +652,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B82762052ADC540E001278DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 10.0.0;
+				minimumVersion = 9.0.0;
+			};
+		};
 		B88F6B4E2ADAEA4800DD5596 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -608,6 +673,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B82762062ADC540E001278DB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B82762052ADC540E001278DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		B88F6B4F2ADAEA4800DD5596 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B88F6B4E2ADAEA4800DD5596 /* XCRemoteSwiftPackageReference "Alamofire" */;
