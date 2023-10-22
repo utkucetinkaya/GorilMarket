@@ -9,13 +9,13 @@ import UIKit
 
 // MARK: - Onboarding Model
 struct Slide {
-    let title: String
-    let desc: String
-    let imageName: String
+    let title: String?
+    let desc: String?
+    let imageName: String?
     
     // MARK: - Collection
     static let collection: [Slide] = [
-        Slide(title: "Lezzetli Yemekler", desc: "Dünyanın dört bir yanındaki farklı kültürlerden çeşitli harika yemekleri deneyimleyin", imageName: "slide3"),
+        Slide(title: "Lezzetli Yemekler", desc: "Dünyanın dört bir yanındaki farklı kültürlerden çeşitli harika yemekleri deneyimleyin", imageName: "slide1"),
         
         Slide(title: "Dünya Standartlarında Şefler", desc: "Yemeklerimiz sadece en iyiler tarafından hazırlanmaktadır.", imageName: "slide2"),
         

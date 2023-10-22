@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,16 +13,12 @@
         <array key="Poppins-Italic.ttf">
             <string>Poppins-Italic</string>
         </array>
-        <array key="Poppins-Regular.ttf">
-            <string>Poppins-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController" customModule="GorilMarket" customModuleProvider="target">
             <connections>
                 <outlet property="emailImage" destination="5Vo-GT-91R" id="DTZ-9B-QJm"/>
                 <outlet property="emailTextField" destination="FRx-i1-kGC" id="KVX-8U-ZFQ"/>
-                <outlet property="googleButton" destination="Sm5-L2-rxD" id="EqH-Jm-QKy"/>
                 <outlet property="loginButton" destination="9bY-tA-BKP" id="h8R-l4-7w5"/>
                 <outlet property="nameImage" destination="Ogi-JD-UIc" id="Pu0-S8-NNa"/>
                 <outlet property="nameTextField" destination="Yp7-dz-Vg7" id="yN4-9d-Nta"/>
@@ -45,7 +40,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lJO-vT-yza" userLabel="HeaderStackView">
                             <rect key="frame" x="75" y="60" width="240" height="254"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GorilMarketLogo2" translatesAutoresizingMaskIntoConstraints="NO" id="5GP-6W-L2c">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5GP-6W-L2c">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="170" id="7KJ-b6-qcb"/>
@@ -96,7 +91,7 @@
                                     <fontDescription key="fontDescription" name="Poppins-Italic" family="Poppins" pointSize="12"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-N3-lI8" customClass="PassWordTextField" customModule="TomofilyaApp" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-N3-lI8" customClass="PassWordTextField" customModule="GorilMarket" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="120" width="290" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     <color key="tintColor" name="PrimaryColor"/>
@@ -110,25 +105,25 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kuf-gp-hE5">
-                            <rect key="frame" x="0.0" y="346" width="50" height="164"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Kuf-gp-hE5">
+                            <rect key="frame" x="0.0" y="350" width="50" height="160"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="Ogi-JD-UIc">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Ogi-JD-UIc">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="PPt-12-k7e"/>
+                                        <constraint firstAttribute="height" constant="30" id="PPt-12-k7e"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="5Vo-GT-91R">
-                                    <rect key="frame" x="0.0" y="60" width="50" height="44"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="5Vo-GT-91R">
+                                    <rect key="frame" x="0.0" y="65" width="50" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="yDh-8J-O3f"/>
+                                        <constraint firstAttribute="height" constant="30" id="yDh-8J-O3f"/>
                                     </constraints>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="zDY-OQ-bNa">
-                                    <rect key="frame" x="0.0" y="120" width="50" height="44"/>
+                                    <rect key="frame" x="0.0" y="130" width="50" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="eJd-LH-QKE"/>
+                                        <constraint firstAttribute="height" constant="30" id="eJd-LH-QKE"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
@@ -138,7 +133,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bY-tA-BKP">
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
-                                    <color key="backgroundColor" red="0.094117647058823528" green="0.16470588235294117" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="SecondaryColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="30f-OB-msS"/>
                                     </constraints>
@@ -147,6 +142,9 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Giriş Yap">
                                         <fontDescription key="titleFontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="loginClicked:" destination="-1" eventType="touchUpInside" id="oGT-YG-Qpy"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg9-p1-vNS">
                                     <rect key="frame" x="0.0" y="60" width="350" height="44"/>
@@ -159,69 +157,12 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Kayıt Ol">
                                         <fontDescription key="titleFontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="signUpClicked:" destination="-1" eventType="touchUpInside" id="llr-NT-7SJ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e4C-So-EC6" userLabel="SeperatorStackView">
-                            <rect key="frame" x="0.0" y="678" width="390" height="17"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-TH-RPh">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="17"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ya da" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-35-WLV">
-                                            <rect key="frame" x="178" y="0.0" width="34.333333333333343" height="17"/>
-                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
-                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKm-Ip-Udn">
-                                            <rect key="frame" x="248" y="8" width="142" height="1"/>
-                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="kMW-yH-79n"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pl-Ba-CfY">
-                                            <rect key="frame" x="0.0" y="8" width="142" height="1"/>
-                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="9V2-to-hBp"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="UKm-Ip-Udn" firstAttribute="leading" secondItem="XQK-TH-RPh" secondAttribute="leading" constant="248" id="4fc-YR-wkS"/>
-                                        <constraint firstAttribute="height" constant="17" id="EdY-RS-fp4"/>
-                                        <constraint firstItem="3pl-Ba-CfY" firstAttribute="top" secondItem="XQK-TH-RPh" secondAttribute="top" constant="8" id="G8t-WC-jXn"/>
-                                        <constraint firstItem="qcl-35-WLV" firstAttribute="centerX" secondItem="XQK-TH-RPh" secondAttribute="centerX" id="JIW-eF-FDa"/>
-                                        <constraint firstAttribute="trailing" secondItem="3pl-Ba-CfY" secondAttribute="trailing" constant="248" id="UW7-Zc-WdK"/>
-                                        <constraint firstAttribute="bottom" secondItem="qcl-35-WLV" secondAttribute="bottom" id="Xdv-nl-WLJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="UKm-Ip-Udn" secondAttribute="bottom" constant="8" id="am1-tp-K0f"/>
-                                        <constraint firstItem="UKm-Ip-Udn" firstAttribute="top" secondItem="XQK-TH-RPh" secondAttribute="top" constant="8" id="e4O-Ge-Awi"/>
-                                        <constraint firstItem="3pl-Ba-CfY" firstAttribute="leading" secondItem="XQK-TH-RPh" secondAttribute="leading" id="hId-Na-w0j"/>
-                                        <constraint firstItem="qcl-35-WLV" firstAttribute="top" secondItem="XQK-TH-RPh" secondAttribute="top" id="lNl-Ca-iVX"/>
-                                        <constraint firstAttribute="bottom" secondItem="3pl-Ba-CfY" secondAttribute="bottom" constant="8" id="sJ4-BA-cVP"/>
-                                        <constraint firstAttribute="trailing" secondItem="UKm-Ip-Udn" secondAttribute="trailing" id="wfP-R2-Kmz"/>
-                                    </constraints>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="17" id="2Fp-gl-zej"/>
-                            </constraints>
-                        </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-L2-rxD">
-                            <rect key="frame" x="20" y="711" width="350" height="44"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="44" id="65d-6C-6HV"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="     Google ile Devam Et" image="google">
-                                <color key="titleColor" name="Background"/>
-                            </state>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -230,26 +171,19 @@
                         <constraint firstItem="mIU-jB-Mb2" firstAttribute="leading" secondItem="Kuf-gp-hE5" secondAttribute="trailing" id="HOv-fb-zO9"/>
                         <constraint firstItem="vcw-Cf-aUc" firstAttribute="centerX" secondItem="elG-TP-j9G" secondAttribute="centerX" id="MGx-TE-6jP"/>
                         <constraint firstAttribute="trailing" secondItem="vcw-Cf-aUc" secondAttribute="trailing" constant="20" id="NXt-RQ-yCx"/>
-                        <constraint firstItem="Sm5-L2-rxD" firstAttribute="top" secondItem="e4C-So-EC6" secondAttribute="bottom" constant="16" id="QSs-je-j2a"/>
                         <constraint firstItem="vcw-Cf-aUc" firstAttribute="top" secondItem="mIU-jB-Mb2" secondAttribute="bottom" constant="32" id="R2t-RN-oUV"/>
                         <constraint firstAttribute="trailing" secondItem="mIU-jB-Mb2" secondAttribute="trailing" constant="50" id="S3a-4u-sKY"/>
                         <constraint firstItem="vcw-Cf-aUc" firstAttribute="top" secondItem="Kuf-gp-hE5" secondAttribute="bottom" constant="32" id="XQM-fr-5gt"/>
-                        <constraint firstItem="Sm5-L2-rxD" firstAttribute="leading" secondItem="elG-TP-j9G" secondAttribute="leading" constant="20" id="dbb-RY-XJF"/>
                         <constraint firstItem="vcw-Cf-aUc" firstAttribute="leading" secondItem="elG-TP-j9G" secondAttribute="leading" constant="20" id="ik2-kb-AWw"/>
-                        <constraint firstItem="Sm5-L2-rxD" firstAttribute="centerX" secondItem="elG-TP-j9G" secondAttribute="centerX" id="jef-aZ-qi4"/>
-                        <constraint firstAttribute="trailing" secondItem="Sm5-L2-rxD" secondAttribute="trailing" constant="20" id="ksJ-ZI-vjV"/>
-                        <constraint firstItem="e4C-So-EC6" firstAttribute="top" secondItem="vcw-Cf-aUc" secondAttribute="bottom" constant="32" id="nuH-64-lZB"/>
                         <constraint firstItem="mIU-jB-Mb2" firstAttribute="centerX" secondItem="elG-TP-j9G" secondAttribute="centerX" id="qxb-4W-mU8"/>
                         <constraint firstItem="mIU-jB-Mb2" firstAttribute="leading" secondItem="elG-TP-j9G" secondAttribute="leading" constant="50" id="ud1-2u-Arg"/>
-                        <constraint firstAttribute="trailing" secondItem="e4C-So-EC6" secondAttribute="trailing" id="wzr-sy-g7H"/>
                         <constraint firstItem="lJO-vT-yza" firstAttribute="centerX" secondItem="elG-TP-j9G" secondAttribute="centerX" id="yQX-k4-Adz"/>
-                        <constraint firstItem="e4C-So-EC6" firstAttribute="leading" secondItem="elG-TP-j9G" secondAttribute="leading" id="yZA-X2-4yD"/>
                         <constraint firstItem="lJO-vT-yza" firstAttribute="top" secondItem="elG-TP-j9G" secondAttribute="top" constant="60" id="yoY-gc-Vzm"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.068877406419999995" green="0.11740920689999999" blue="0.13838919999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="Background"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="elG-TP-j9G" secondAttribute="trailing" id="DRK-rR-QNb"/>
                 <constraint firstItem="elG-TP-j9G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pjf-Ld-Wk7"/>
@@ -259,22 +193,19 @@
             <point key="canvasLocation" x="56.92307692307692" y="20.616113744075829"/>
         </view>
     </objects>
-    <designables>
-        <designable name="m0Q-N3-lI8">
-            <size key="intrinsicContentSize" width="66.666666666666671" height="34"/>
-        </designable>
-    </designables>
     <resources>
-        <image name="GorilMarketLogo2" width="480.33334350585938" height="453.66665649414062"/>
-        <image name="email" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="google" width="16.666666030883789" height="16.666666030883789"/>
-        <image name="name" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="password" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="appIcon" width="480.33334350585938" height="453.66665649414062"/>
+        <image name="email" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="password" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="user" width="170.66667175292969" height="170.66667175292969"/>
         <namedColor name="Background">
-            <color red="0.095611967150000005" green="0.16469517350000001" blue="0.17751553649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.096000000834465027" green="0.16500000655651093" blue="0.17800000309944153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryColor">
             <color red="0.030999999493360519" green="0.67500001192092896" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryColor">
+            <color red="0.046000000089406967" green="0.061000000685453415" blue="0.12800000607967377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

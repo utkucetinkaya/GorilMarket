@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "_55e13717-b743-4e3a-b678-adf817a9efe9.jpeg",
+      "filename" : "slide2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "_55e13717-b743-4e3a-b678-adf817a9efe9@2x.jpeg",
+      "filename" : "slide2@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "_55e13717-b743-4e3a-b678-adf817a9efe9@3x.jpeg",
+      "filename" : "slide2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

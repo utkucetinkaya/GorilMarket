@@ -16,53 +16,61 @@ import Alamofire
      func request() -> URLRequest
  }
 
- enum Router {
-     
-     case tumYemekleriGetir
-     case sepettekiYemekleriGetir
-     case sepeteYemekEkle(yemekId: Int)
-     case sepettenYemekSil(yemekId: Int)
-     case yemekResmiGetir(resimAdi: String)
- }
-
- extension Router: URLRequestConvertible {
+enum Router {
     
-     static let baseURL = "https://kasimadalan.pe.hu/yemekler"
-     
-     var url: URL {
-         switch self {
-         case .tumYemekleriGetir:
-             return URL(string: Router.baseURL + "/tumYemekleriGetir.php")!
-         case .sepettekiYemekleriGetir:
-             return URL(string: Router.baseURL + "/sepettekiYemekleriGetir.php")!
-         case .sepeteYemekEkle(let yemekId):
-             return URL(string: Router.baseURL + "/sepeteYemekEkle.php?yemekId=\(yemekId)")!
-         case .sepettenYemekSil(let yemekId):
-             return URL(string: Router.baseURL + "/sepettenYemekSil.php?yemekId=\(yemekId)")!
-         case .yemekResmiGetir(let resimAdi):
-             return URL(string: Router.baseURL + "/resimler/\(resimAdi)")!
-         }
-     }
+    case tumYemekleriGetir
+    case sepeteYemekEkle(name: String, imageName: String, price: Int, order: Int, username: String)
+    case sepettekiYemekleriGetir(username: String)
+    case sepettenYemekSil(cartID: String, username: String)
+}
+
+extension Router: URLRequestConvertible {
+    
+    var url: URL {
+        switch self {
+        case .tumYemekleriGetir:
+            return URL(string: Constants.shared.baseURL + "/tumYemekleriGetir.php")!
+        case .sepeteYemekEkle:
+            return URL(string: Constants.shared.baseURL + "/sepeteYemekEkle.php")!
+        case .sepettekiYemekleriGetir:
+            return URL(string: Constants.shared.baseURL + "/sepettekiYemekleriGetir.php")!
+        case .sepettenYemekSil:
+            return URL(string: Constants.shared.baseURL + "/sepettenYemekSil.php")!
+        }
+    }
      
      var method: HTTPMethod {
          switch self {
-         case .tumYemekleriGetir, .sepettekiYemekleriGetir, .yemekResmiGetir:
+         case .tumYemekleriGetir:
              return .get
-         case .sepeteYemekEkle, .sepettenYemekSil:
+         case .sepeteYemekEkle, .sepettekiYemekleriGetir, .sepettenYemekSil:
              return .post
          }
      }
      
-     var parameters: [String : Any]? {
-         switch self {
-         case .tumYemekleriGetir, .sepettekiYemekleriGetir, .yemekResmiGetir:
-             return [:]
-         case .sepeteYemekEkle(let yemekId):
-             return ["yemekId": yemekId]
-         case .sepettenYemekSil(let yemekId):
-             return ["yemekId": yemekId]
-         }
-     }
+    var parameters: [String : Any]? {
+        switch self {
+        case .tumYemekleriGetir:
+            return nil
+        case .sepeteYemekEkle(let name, let imageName, let price, let order, let username):
+            return [
+                "yemek_adi": name,
+                "yemek_resim_adi": imageName,
+                "yemek_fiyat": price,
+                "yemek_siparis_adet": order,
+                "kullanici_adi": username
+            ]
+        case .sepettekiYemekleriGetir(let username):
+            return [
+                "kullanici_adi": username
+            ]
+        case .sepettenYemekSil(let cartID, let username):
+            return [
+                "sepet_yemek_id": cartID,
+                "kullanici_adi": username
+            ]
+        }
+    }
      
      var headers: [String : String]? {
          return [:]

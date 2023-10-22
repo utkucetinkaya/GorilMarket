@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
     
@@ -19,10 +20,9 @@ class LoginController: UIViewController {
     @IBOutlet weak private var signUpButton: UIButton!
     @IBOutlet weak private var loginButton: UIButton!
     @IBOutlet weak private var passwordImage: UIImageView!
-    @IBOutlet weak private var googleButton: UIButton!
     
     // MARK: - PageTypeEnum
-
+    
     private enum PageType {
         case login
         case signUp
@@ -35,12 +35,15 @@ class LoginController: UIViewController {
         }
     }
     
+    let loginViewModel = LoginViewModel()
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
         setupViewsFor(pageType: .login)
+        loginViewModel.delegate = self
     }
     
     // MARK: - Set UI
@@ -59,10 +62,8 @@ class LoginController: UIViewController {
         loginButton.setBorder(width: 1, color: UIColor.primaryColor ?? .clear)
         
         signUpButton.setCorner(radius: 20)
-        signUpButton.setBorder(width: 2, color: UIColor.thirdColor ?? .clear)
+        signUpButton.setBorder(width: 1, color: UIColor.white)
         
-        googleButton.setCorner(radius: 20)
-        googleButton.setBorder(width: 1, color: UIColor.primaryColor ?? .clear)
     }
     
     // MARK: - Set PageType
@@ -77,5 +78,50 @@ class LoginController: UIViewController {
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
+    }
+    
+    // MARK: - LoginAction
+    @IBAction func loginClicked(_ sender: Any) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            loginViewModel.signIn(email: email, password: password)
+        }
+    }
+    
+    // MARK: - SignInAction
+    @IBAction func signUpClicked(_ sender: Any) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            loginViewModel.signUp(email: email, password: password)
+        }
+    }
+}
+
+// MARK: - LoginViewModelDelegate
+extension LoginController: LoginViewModelDelegate {
+  
+    // MARK: - sign up
+    func didSignUp() {
+        self.showPopUp(title: "Kayıt olma başarılı", text: "Hesabınız başarıyla oluşturuldu.", buttontext: "Tamam")
+    }
+    
+    func didFailToSignUp(error: Error) {
+        var popUpWindow: PopUpWindow!
+        popUpWindow = PopUpWindow(title: "Kayıt olma hatası", text: "\(error.localizedDescription)", buttontext: "Tamam")
+        self.present(popUpWindow, animated: true, completion: nil)
+
+    }
+    
+    // MARK: - sign in
+    func didSignIn() {
+        self.showPopUp(title: "Giriş yapma başarılı ✔", text: "Goril Markete Hoşgeldin 👋", buttontext: "Hoşbuldum")
+
+        let vc = TabBarController()
+        self.navigationController?.setViewControllers([vc], animated: true)
+        print("Giris basarili")
+    }
+    
+    func didFailToSignIn(error: Error) {
+        self.showPopUp(title: "Giriş yapma hatası", text: "\(error.localizedDescription)", buttontext: "Tamam")
     }
 }

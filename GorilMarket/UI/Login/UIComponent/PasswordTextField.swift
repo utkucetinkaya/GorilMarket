@@ -7,10 +7,10 @@
 
 import UIKit
 
-@IBDesignable class PassWordTextField: UITextField {
+class PassWordTextField: UITextField {
     
-    @IBInspectable var hideEye: String = "hideEye"
-    @IBInspectable var showEye: String = "showEye"
+    var hideEye: String = "hideEye"
+    var showEye: String = "showEye"
     
     static let eyeContainerBounds = CGSize(width: 50, height: 50)
     static let eyeSelectorBounds = CGSize(width: 30, height: 30)
@@ -48,7 +48,7 @@ import UIKit
         self.eyeContainer.addSubview(eyeSelector)
         self.rightView = eyeContainer
         self.rightViewMode = .always
-        
+        self.textContentType = .oneTimeCode
         self.isSecureTextEntry = true
     }
     

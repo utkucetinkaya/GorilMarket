@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="MenuCell" customModule="GorilMarket" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="205"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="205"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjc-NY-2n6">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="205"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dSE-AD-NPu">
+                                <rect key="frame" x="105" y="133" width="109.33333333333331" height="40.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="food name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJa-BS-B9a">
+                                        <rect key="frame" x="13" y="0.0" width="83" height="21"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="food price label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXM-t5-Ywl">
+                                        <rect key="frame" x="0.0" y="21" width="109.33333333333333" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Del-Dc-Yf2">
+                                <rect key="frame" x="0.0" y="0.0" width="319" height="123"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="b80-il-tDe">
+                                        <rect key="frame" x="35" y="0.0" width="249" height="123"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="123" id="8yM-Mz-e9j"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="b80-il-tDe" firstAttribute="top" secondItem="Del-Dc-Yf2" secondAttribute="top" id="22f-DT-aFx"/>
+                                    <constraint firstAttribute="bottom" secondItem="b80-il-tDe" secondAttribute="bottom" id="Ddp-Sj-vPR"/>
+                                    <constraint firstItem="b80-il-tDe" firstAttribute="leading" secondItem="Del-Dc-Yf2" secondAttribute="leading" constant="35" id="O2I-Iy-Afx"/>
+                                    <constraint firstAttribute="trailing" secondItem="b80-il-tDe" secondAttribute="trailing" constant="35" id="ebL-Vd-9zh"/>
+                                    <constraint firstAttribute="height" constant="123" id="fxq-vj-c6b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Del-Dc-Yf2" secondAttribute="trailing" id="Bmi-HX-bIg"/>
+                            <constraint firstItem="Del-Dc-Yf2" firstAttribute="top" secondItem="Hjc-NY-2n6" secondAttribute="top" id="NXI-sR-6YX"/>
+                            <constraint firstItem="dSE-AD-NPu" firstAttribute="top" secondItem="Del-Dc-Yf2" secondAttribute="bottom" constant="10" id="WXU-XT-3N1"/>
+                            <constraint firstItem="dSE-AD-NPu" firstAttribute="centerX" secondItem="Hjc-NY-2n6" secondAttribute="centerX" id="Y9S-3m-0wA"/>
+                            <constraint firstItem="Del-Dc-Yf2" firstAttribute="leading" secondItem="Hjc-NY-2n6" secondAttribute="leading" id="f0t-de-MIj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Hjc-NY-2n6" secondAttribute="bottom" id="20t-3k-OJM"/>
+                <constraint firstAttribute="trailing" secondItem="Hjc-NY-2n6" secondAttribute="trailing" id="Huw-ia-Fen"/>
+                <constraint firstItem="Hjc-NY-2n6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KGn-k1-VCC"/>
+                <constraint firstItem="Hjc-NY-2n6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="p1b-IP-SbQ"/>
+            </constraints>
+            <size key="customSize" width="319" height="205"/>
+            <connections>
+                <outlet property="foodImageView" destination="b80-il-tDe" id="Gyv-Gf-Lin"/>
+                <outlet property="foodNameLabel" destination="XJa-BS-B9a" id="qw4-Ix-AoC"/>
+                <outlet property="foodPricaLabel" destination="tXM-t5-Ywl" id="6y1-yk-ElJ"/>
+                <outlet property="imageBackgroundView" destination="Del-Dc-Yf2" id="zNr-ph-si1"/>
+                <outlet property="menuBackgroundView" destination="Hjc-NY-2n6" id="ept-UC-bZB"/>
+            </connections>
+            <point key="canvasLocation" x="206.92307692307691" y="-8.8862559241706158"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="appIcon" width="480.33334350585938" height="453.66665649414062"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.030999999493360519" green="0.67500001192092896" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,30 +9,30 @@ import Foundation
 import Alamofire
 
 protocol NetworkService {
-    func request<T: Decodable>(_ router: Router,Type: T.Type, completion: @escaping (Result<T, Error>) -> Void)
+    func request<T: Decodable>(_ router: Router, type: T.Type, completion: @escaping (Result<T, Error>) -> Void)
 }
 
-class AlamofireNetworkService: NetworkService {
+class NetworkManager: NetworkService {
 
-    static let shared = AlamofireNetworkService()
+    static let shared = NetworkManager()
     private init() {}
 
-    func request<T: Decodable>(_ router: Router, Type type: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
-
+    func request<T: Decodable>(_ router: Router, type: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+        
         var request = router.request()
-
+        
         // Add parameters to the request body
         if let parameters = router.parameters {
             do {
                 let data = try JSONSerialization.data(withJSONObject: parameters)
+                debugPrint(data)
                 request.httpBody = data
             } catch {
                 print(error.localizedDescription)
             }
         }
-
-        // Make the network request
-        AF.request(request).responseDecodable(of: T.self, completionHandler: { response in
+        guard let url = request.url else { return }
+        AF.request(url, method: .post, parameters: router.parameters).responseDecodable(of: T.self, completionHandler: { response in
             switch response.result {
             case .success(let decodedData):
                 completion(.success(decodedData))
@@ -40,5 +40,17 @@ class AlamofireNetworkService: NetworkService {
                 completion(.failure(error))
             }
         })
+
+        // Make the network request
+//        AF.request(request).responseDecodable(of: T.self, completionHandler: { response in
+//            debugPrint("resr",response)
+//            switch response.result {
+//            case .success(let decodedData):
+//                debugPrint("decodedData", decodedData)
+//                completion(.success(decodedData))
+//            case .failure(let error):
+//                completion(.failure(error))
+//            }
+//        })
     }
 }

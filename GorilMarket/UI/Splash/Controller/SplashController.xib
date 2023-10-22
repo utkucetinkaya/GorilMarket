@@ -44,7 +44,7 @@
                                     <color key="shadowColor" red="0.91342526670000002" green="0.26754191519999998" blue="0.74075287580000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <size key="shadowOffset" width="2" height="2"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GorilMarketLogo2" translatesAutoresizingMaskIntoConstraints="NO" id="BRx-Cq-9TY">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BRx-Cq-9TY">
                                     <rect key="frame" x="0.0" y="146" width="300" height="300"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="300" id="3cx-Ef-627"/>
@@ -73,6 +73,6 @@
         </view>
     </objects>
     <resources>
-        <image name="GorilMarketLogo2" width="480" height="453.5"/>
+        <image name="appIcon" width="480" height="453.5"/>
     </resources>
 </document>

@@ -10,10 +10,10 @@ import UIKit
 class SplashController: UIViewController {
     
     // MARK: - UI Elements
-    @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var gorilLabel: UILabel!
-    @IBOutlet weak var marketLabel: UILabel!
-    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak private var logoImageView: UIImageView!
+    @IBOutlet weak private var gorilLabel: UILabel!
+    @IBOutlet weak private var marketLabel: UILabel!
+    @IBOutlet weak private var backgroundView: UIView!
         
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -64,7 +64,7 @@ class SplashController: UIViewController {
        }
    
     private func goToOnboardingScreen() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             let vc = OnboardingController()
             self.navigationController?.setViewControllers([vc], animated: true)
         }
