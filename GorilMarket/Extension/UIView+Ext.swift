@@ -9,6 +9,13 @@ import UIKit
 
 extension UIView {
     
+    @IBInspectable var cornerRadius: CGFloat {
+        get { return self.cornerRadius}
+        set{
+            self.layer.cornerRadius = newValue
+        }
+    }
+    
     // MARK: - CornerRadius
     func setCorner(radius: CGFloat) {
         layer.cornerRadius = radius
@@ -22,11 +29,11 @@ extension UIView {
     }
     
     // MARK: - TabBarShadow
-    func addShadow() {
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowRadius = 3.0
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: 3, height: 3)
+    func addShadow(color: UIColor, radius: CGFloat, opacity: CGFloat, offset: CGSize) {
+        layer.shadowColor = color.cgColor
+        layer.shadowRadius = radius
+        layer.shadowOpacity = Float(radius)
+        layer.shadowOffset = offset
         layer.masksToBounds = false
     }
     

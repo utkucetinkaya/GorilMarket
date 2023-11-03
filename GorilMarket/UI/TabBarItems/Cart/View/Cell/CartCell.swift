@@ -20,6 +20,7 @@ class CartCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundCellView.setCorner(radius: 13)
+        backgroundCellView.addShadow(color: UIColor.lightGray, radius: 3.0, opacity: 2.0, offset: CGSize(width: 1, height: 2))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

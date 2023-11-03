@@ -40,17 +40,5 @@ class NetworkManager: NetworkService {
                 completion(.failure(error))
             }
         })
-
-        // Make the network request
-//        AF.request(request).responseDecodable(of: T.self, completionHandler: { response in
-//            debugPrint("resr",response)
-//            switch response.result {
-//            case .success(let decodedData):
-//                debugPrint("decodedData", decodedData)
-//                completion(.success(decodedData))
-//            case .failure(let error):
-//                completion(.failure(error))
-//            }
-//        })
     }
 }

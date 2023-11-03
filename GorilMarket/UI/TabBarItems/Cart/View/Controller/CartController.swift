@@ -14,8 +14,7 @@ class CartController: UIViewController {
     @IBOutlet weak private var cartTableView: UITableView!
     @IBOutlet weak private var totalLabel: UILabel!
     @IBOutlet weak private var checkoutButton: UIButton!
-    
-    @IBOutlet weak var totalView: UIView!
+    @IBOutlet weak private var totalView: UIView!
     @IBOutlet weak private var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak private var loadingView: UIView! {
@@ -169,4 +168,3 @@ extension CartController: UITableViewDelegate, UITableViewDataSource {
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
-

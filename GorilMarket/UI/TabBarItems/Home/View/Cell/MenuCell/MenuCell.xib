@@ -54,7 +54,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstItem="b80-il-tDe" firstAttribute="top" secondItem="Del-Dc-Yf2" secondAttribute="top" id="22f-DT-aFx"/>
                                     <constraint firstAttribute="bottom" secondItem="b80-il-tDe" secondAttribute="bottom" id="Ddp-Sj-vPR"/>
@@ -98,8 +98,8 @@
         <namedColor name="PrimaryColor">
             <color red="0.030999999493360519" green="0.67500001192092896" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

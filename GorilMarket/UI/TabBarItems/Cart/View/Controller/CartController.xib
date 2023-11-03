@@ -41,20 +41,20 @@
                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DH2-IS-W31">
-                            <rect key="frame" x="0.0" y="126" width="390" height="420"/>
+                            <rect key="frame" x="0.0" y="146" width="390" height="420"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="420" id="XL9-bV-YSH"/>
                             </constraints>
                         </tableView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sepetim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKY-aN-Rpz">
-                            <rect key="frame" x="20" y="50" width="350" height="56"/>
+                            <rect key="frame" x="20" y="70" width="350" height="56"/>
                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="40"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCq-nw-Q7x">
-                            <rect key="frame" x="35" y="576" width="320" height="50"/>
+                            <rect key="frame" x="35" y="596" width="320" height="50"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="HLu-Me-EfY">
                                     <rect key="frame" x="8.0000000000000071" y="12" width="126.66666666666669" height="26"/>
@@ -83,7 +83,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBj-Wu-D73">
-                            <rect key="frame" x="35" y="651" width="320" height="52"/>
+                            <rect key="frame" x="35" y="671" width="320" height="52"/>
                             <color key="backgroundColor" name="Background"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="52" id="BVH-xS-g3s"/>
@@ -101,7 +101,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="VKY-aN-Rpz" firstAttribute="top" secondItem="c6V-me-ExN" secondAttribute="top" constant="50" id="2NF-1E-9fk"/>
+                        <constraint firstItem="VKY-aN-Rpz" firstAttribute="top" secondItem="c6V-me-ExN" secondAttribute="top" constant="70" id="2NF-1E-9fk"/>
                         <constraint firstAttribute="trailing" secondItem="wCq-nw-Q7x" secondAttribute="trailing" constant="35" id="B2b-4j-OHt"/>
                         <constraint firstItem="bBj-Wu-D73" firstAttribute="top" secondItem="wCq-nw-Q7x" secondAttribute="bottom" constant="25" id="DsW-cC-AMq"/>
                         <constraint firstAttribute="trailing" secondItem="VKY-aN-Rpz" secondAttribute="trailing" constant="20" id="Fc8-BA-5cH"/>

@@ -7,7 +7,7 @@
 import FirebaseAuth
 
 // MARK: - LoginViewModelDelegate
-protocol LoginViewModelDelegate {
+protocol LoginViewModelDelegate: AnyObject {
     func didSignIn()
     func didFailToSignIn(error: Error)
     
@@ -19,7 +19,7 @@ class LoginViewModel {
     
     // MARK: - Properties
     private let auth: Auth
-    var delegate: LoginViewModelDelegate?
+    weak var delegate: LoginViewModelDelegate?
     
     // MARK: - init
     init(auth: Auth = Auth.auth()) {

@@ -154,14 +154,6 @@ class HomeController: UIViewController {
     }
 }
 
-
-// MARK: - SearchBarDelegate
-extension HomeController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-    }
-}
-
 // MARK: - UICollectionViewDelegate,UICollectionViewDataSource
 extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     

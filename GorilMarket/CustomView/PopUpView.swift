@@ -28,7 +28,6 @@ class PopUpWindow: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     @objc func dismissView(){
         self.dismiss(animated: true, completion: nil)
     }
@@ -41,7 +40,7 @@ private class PopUpWindowView: UIView {
     let popupText = UILabel(frame: CGRect.zero)
     let popupButton = UIButton(frame: CGRect.zero)
     
-    let BorderWidth: CGFloat = 2.0
+    let BorderWidth: CGFloat = 1.0
     
     init() {
         super.init(frame: CGRect.zero)
@@ -52,7 +51,6 @@ private class PopUpWindowView: UIView {
         popupView.backgroundColor = UIColor.systemGray5
         popupView.layer.borderWidth = BorderWidth
         popupView.layer.masksToBounds = true
-        popupView.layer.borderColor = UIColor.primaryColor?.cgColor
         popupView.setCorner(radius: 10)
         
         // Popup Title
@@ -76,7 +74,6 @@ private class PopUpWindowView: UIView {
         popupButton.titleLabel?.font = UIFont(name: "Poppins-Light", size: 15)
         popupButton.backgroundColor = UIColor.systemGray3
         popupButton.setCorner(radius: 10)
-        popupButton.setBorder(width: 1, color: UIColor.primaryColor ?? .clear)
         
         popupView.addSubview(popupTitle)
         popupView.addSubview(popupText)
@@ -84,7 +81,6 @@ private class PopUpWindowView: UIView {
         
         // Add the popupView(box) in the PopUpWindowView (semi-transparent background)
         addSubview(popupView)
-        
         
         // PopupView constraints
         popupView.translatesAutoresizingMaskIntoConstraints = false
@@ -103,7 +99,6 @@ private class PopUpWindowView: UIView {
             popupTitle.heightAnchor.constraint(equalToConstant: 55)
             ])
         
-        
         // PopupText constraints
         popupText.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -114,7 +109,6 @@ private class PopUpWindowView: UIView {
             popupText.bottomAnchor.constraint(equalTo: popupButton.topAnchor, constant: -8)
             ])
 
-        
         // PopupButton constraints
         popupButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -128,5 +122,4 @@ private class PopUpWindowView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

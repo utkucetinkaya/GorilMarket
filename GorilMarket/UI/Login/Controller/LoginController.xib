@@ -80,7 +80,7 @@
                                     <fontDescription key="fontDescription" name="Poppins-Italic" family="Poppins" pointSize="12"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRx-i1-kGC">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="utku@hotmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRx-i1-kGC">
                                     <rect key="frame" x="0.0" y="60" width="290" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     <color key="tintColor" name="PrimaryColor"/>
@@ -91,7 +91,7 @@
                                     <fontDescription key="fontDescription" name="Poppins-Italic" family="Poppins" pointSize="12"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-N3-lI8" customClass="PassWordTextField" customModule="GorilMarket" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Parola" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0Q-N3-lI8" customClass="PassWordTextField" customModule="GorilMarket" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="120" width="290" height="44"/>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     <color key="tintColor" name="PrimaryColor"/>

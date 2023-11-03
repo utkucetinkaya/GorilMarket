@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 final class TabBarController: UITabBarController {
 
     // MARK: - Properties

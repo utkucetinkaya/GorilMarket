@@ -97,10 +97,13 @@ extension ProfileController: UITableViewDelegate,UITableViewDataSource {
         switch indexPath.section {
         case 0:
             cell.titleLabel.text = accounts[indexPath.row]
+            cell.accessoryType = .disclosureIndicator
         case 1:
             cell.titleLabel.text = morefeatures[indexPath.row]
+            cell.accessoryType = .disclosureIndicator
         case 2:
             cell.titleLabel.text = support[indexPath.row]
+            cell.accessoryType = .disclosureIndicator
         default:
             return UITableViewCell()
         }

@@ -45,8 +45,4 @@ class MenuCell: UICollectionViewCell {
         foodImageView.kf.indicator?.view.setCorner(radius: 6)
         foodImageView.kf.setImage(with: imageUrl,placeholder: nil,options: [.transition(.fade(0.7))])
     }
-
-    // MARK: - IBAction
-    @IBAction func addToCartTapped(_ sender: Any) {
-    }
 }
