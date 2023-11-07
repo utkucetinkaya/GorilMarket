@@ -41,10 +41,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DH2-IS-W31">
-                            <rect key="frame" x="0.0" y="146" width="390" height="420"/>
+                            <rect key="frame" x="0.0" y="146" width="390" height="480"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="420" id="XL9-bV-YSH"/>
+                                <constraint firstAttribute="height" constant="480" id="XL9-bV-YSH"/>
                             </constraints>
                         </tableView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sepetim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKY-aN-Rpz">
@@ -54,7 +54,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCq-nw-Q7x">
-                            <rect key="frame" x="35" y="596" width="320" height="50"/>
+                            <rect key="frame" x="35" y="631" width="320" height="50"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="HLu-Me-EfY">
                                     <rect key="frame" x="8.0000000000000071" y="12" width="126.66666666666669" height="26"/>
@@ -83,7 +83,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBj-Wu-D73">
-                            <rect key="frame" x="35" y="671" width="320" height="52"/>
+                            <rect key="frame" x="35" y="701" width="320" height="52"/>
                             <color key="backgroundColor" name="Background"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="52" id="BVH-xS-g3s"/>
@@ -99,21 +99,21 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="VKY-aN-Rpz" firstAttribute="top" secondItem="c6V-me-ExN" secondAttribute="top" constant="70" id="2NF-1E-9fk"/>
+                        <constraint firstItem="wCq-nw-Q7x" firstAttribute="top" secondItem="DH2-IS-W31" secondAttribute="bottom" constant="5" id="5eL-Wd-Opl"/>
                         <constraint firstAttribute="trailing" secondItem="wCq-nw-Q7x" secondAttribute="trailing" constant="35" id="B2b-4j-OHt"/>
-                        <constraint firstItem="bBj-Wu-D73" firstAttribute="top" secondItem="wCq-nw-Q7x" secondAttribute="bottom" constant="25" id="DsW-cC-AMq"/>
                         <constraint firstAttribute="trailing" secondItem="VKY-aN-Rpz" secondAttribute="trailing" constant="20" id="Fc8-BA-5cH"/>
                         <constraint firstItem="DH2-IS-W31" firstAttribute="leading" secondItem="c6V-me-ExN" secondAttribute="leading" id="FmS-TS-kot"/>
                         <constraint firstItem="bBj-Wu-D73" firstAttribute="leading" secondItem="c6V-me-ExN" secondAttribute="leading" constant="35" id="Ls2-gG-kFr"/>
                         <constraint firstAttribute="trailing" secondItem="bBj-Wu-D73" secondAttribute="trailing" constant="35" id="N4B-ZT-A5u"/>
                         <constraint firstItem="VKY-aN-Rpz" firstAttribute="leading" secondItem="c6V-me-ExN" secondAttribute="leading" constant="20" id="YD7-rv-Fcm"/>
-                        <constraint firstItem="wCq-nw-Q7x" firstAttribute="top" secondItem="DH2-IS-W31" secondAttribute="bottom" constant="30" id="Z8V-k9-t5a"/>
                         <constraint firstItem="wCq-nw-Q7x" firstAttribute="leading" secondItem="c6V-me-ExN" secondAttribute="leading" constant="35" id="g7f-8r-HYX"/>
                         <constraint firstAttribute="trailing" secondItem="DH2-IS-W31" secondAttribute="trailing" id="q6e-A2-4t4"/>
                         <constraint firstItem="VKY-aN-Rpz" firstAttribute="centerX" secondItem="c6V-me-ExN" secondAttribute="centerX" id="qWi-Is-4KF"/>
                         <constraint firstItem="DH2-IS-W31" firstAttribute="top" secondItem="VKY-aN-Rpz" secondAttribute="bottom" constant="20" id="uGb-uJ-xBG"/>
+                        <constraint firstItem="bBj-Wu-D73" firstAttribute="top" secondItem="wCq-nw-Q7x" secondAttribute="bottom" constant="20" id="w05-Zt-dtN"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdz-n4-a4F">
@@ -149,7 +149,7 @@
             <color red="0.096000000834465027" green="0.16500000655651093" blue="0.17800000309944153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryColor">
-            <color red="0.030999999493360519" green="0.67500001192092896" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.031372549019607843" green="0.67450980392156867" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

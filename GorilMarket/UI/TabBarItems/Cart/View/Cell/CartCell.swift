@@ -8,7 +8,11 @@
 import UIKit
 import Kingfisher
 
-class CartCell: UITableViewCell {
+protocol FavoriteDeleteProtocol {
+    func favoriteDelete(indexPath: IndexPath)
+}
+
+final class CartCell: UITableViewCell {
 
     // MARK: - UI Elements
     @IBOutlet weak var cartNameLabel: UILabel!
@@ -17,6 +21,11 @@ class CartCell: UITableViewCell {
     @IBOutlet weak var backgroundCellView: UIView!
     @IBOutlet weak var orderLabel: UILabel!
     
+    // MARK: - Properties
+    var indexPath : IndexPath?
+    var favoriteDeleteProtocol: FavoriteDeleteProtocol?
+    
+    // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundCellView.setCorner(radius: 13)
@@ -27,6 +36,10 @@ class CartCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        favoriteDeleteProtocol?.favoriteDelete(indexPath: indexPath ?? [])
     }
     
     // MARK: - SetCell

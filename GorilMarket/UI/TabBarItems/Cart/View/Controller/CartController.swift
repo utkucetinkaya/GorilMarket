@@ -124,6 +124,8 @@ extension CartController: UITableViewDelegate, UITableViewDataSource {
         let imageName = cart?.imageName
         let order = cart?.order
         cell.setCell(price: price ?? "", name: name ?? "", imageName: imageName ?? "", order: order ?? "")
+        cell.favoriteDeleteProtocol = self
+        cell.indexPath = indexPath
         getTotalCart()
         return cell
     }
@@ -166,5 +168,16 @@ extension CartController: UITableViewDelegate, UITableViewDataSource {
             }
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+}
+
+// MARK: - FavoriteDeleteProtocol
+extension CartController: FavoriteDeleteProtocol {
+    func favoriteDelete(indexPath: IndexPath) {
+        let cart = self.cartModel?[indexPath.row]
+        viewModel.deleteMealFromCart(cartID: cart?.cartID ?? "", username: Constants.shared.username ?? "")
+        cartModel?.remove(at: indexPath.row)
+        cartTableView.deleteRows(at: [indexPath], with: .top)
+        cartTableView.reloadData()
     }
 }

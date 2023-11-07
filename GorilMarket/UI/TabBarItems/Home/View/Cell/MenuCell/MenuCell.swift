@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+protocol MenuCellDelegate: AnyObject {
+    func addMealToCart(foodItem: Food)
+}
+
 class MenuCell: UICollectionViewCell {
     
     // MARK: - UI Element
@@ -16,6 +20,10 @@ class MenuCell: UICollectionViewCell {
     @IBOutlet weak private var foodPricaLabel: UILabel!
     @IBOutlet weak private var foodImageView: UIImageView!
     @IBOutlet weak private var imageBackgroundView: UIView!
+    
+    // MARK: - Properties
+    var foodItem: Food?
+    weak var delegate: MenuCellDelegate?
     
     // MARK: - Life Cycle
     override func awakeFromNib() {
@@ -35,14 +43,22 @@ class MenuCell: UICollectionViewCell {
     }
     
     // MARK: - SetCell
-    func setCell(price: String,name: String, id: String) {
-        foodNameLabel.text = name
-        foodPricaLabel.text = ("₺\(price),00")
+    func setCell(foodItem: Food) {
+        self.foodItem = foodItem
+        foodNameLabel.text = "\(foodItem.name ?? "")"
+        foodPricaLabel.text = "₺\(foodItem.price ?? ""),00"
         
-        let imageUrl = URL(string: Constants.shared.imageURL + "\(id)")
+        let imageUrl = URL(string: Constants.shared.imageURL + "\(foodItem.imageName ?? "")")
+        foodImageView.kf.setImage(with: imageUrl)
         foodImageView.kf.indicatorType = .activity
         foodImageView.kf.indicator?.view.backgroundColor = .primaryColor
         foodImageView.kf.indicator?.view.setCorner(radius: 6)
         foodImageView.kf.setImage(with: imageUrl,placeholder: nil,options: [.transition(.fade(0.7))])
+    }
+    
+    // MARK: - AddCartAction
+    @IBAction func addCartButtonTapped(_ sender: Any) {
+        guard let foodItem = foodItem else { return }
+        delegate?.addMealToCart(foodItem: foodItem)
     }
 }

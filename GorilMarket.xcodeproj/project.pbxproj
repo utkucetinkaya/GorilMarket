@@ -73,6 +73,8 @@
 		B88F6B502ADAEA4800DD5596 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B88F6B4F2ADAEA4800DD5596 /* Alamofire */; };
 		B88F6B582ADB0F2800DD5596 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B572ADB0F2800DD5596 /* PasswordTextField.swift */; };
 		B88F6B5A2ADB121600DD5596 /* LoginSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F6B592ADB121600DD5596 /* LoginSegmentControl.swift */; };
+		B895D8072AF52CB8003458E5 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895D8052AF52CB8003458E5 /* DetailCollectionViewCell.swift */; };
+		B895D8082AF52CB8003458E5 /* DetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B895D8062AF52CB8003458E5 /* DetailCollectionViewCell.xib */; };
 		B8D5744F2AE01E60002869F4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B8D5744E2AE01E60002869F4 /* Kingfisher */; };
 		B8D574532AE0222A002869F4 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D574512AE0222A002869F4 /* DetailController.swift */; };
 		B8D574542AE0222A002869F4 /* DetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D574522AE0222A002869F4 /* DetailController.xib */; };
@@ -149,6 +151,8 @@
 		B88F6B4C2ADAE9FA00DD5596 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B88F6B572ADB0F2800DD5596 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		B88F6B592ADB121600DD5596 /* LoginSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSegmentControl.swift; sourceTree = "<group>"; };
+		B895D8052AF52CB8003458E5 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		B895D8062AF52CB8003458E5 /* DetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		B8D574512AE0222A002869F4 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		B8D574522AE0222A002869F4 /* DetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailController.xib; sourceTree = "<group>"; };
 		B8E049AC2AE09D130032F39B /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
@@ -446,13 +450,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		B866B8622AE1F83500FF8D0C /* Controller */ = {
+		B866B8622AE1F83500FF8D0C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B8D574512AE0222A002869F4 /* DetailController.swift */,
-				B8D574522AE0222A002869F4 /* DetailController.xib */,
+				B895D8042AF52AA6003458E5 /* Controller */,
+				B895D8032AF52A98003458E5 /* Cell */,
 			);
-			path = Controller;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B866B8632AE1F85600FF8D0C /* ViewModel */ = {
@@ -565,11 +569,30 @@
 			path = UIComponent;
 			sourceTree = "<group>";
 		};
+		B895D8032AF52A98003458E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B895D8052AF52CB8003458E5 /* DetailCollectionViewCell.swift */,
+				B895D8062AF52CB8003458E5 /* DetailCollectionViewCell.xib */,
+			);
+			name = Cell;
+			path = ../Controller/Cell;
+			sourceTree = "<group>";
+		};
+		B895D8042AF52AA6003458E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8D574512AE0222A002869F4 /* DetailController.swift */,
+				B8D574522AE0222A002869F4 /* DetailController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B8D574502AE02212002869F4 /* Details */ = {
 			isa = PBXGroup;
 			children = (
 				B866B8632AE1F85600FF8D0C /* ViewModel */,
-				B866B8622AE1F83500FF8D0C /* Controller */,
+				B866B8622AE1F83500FF8D0C /* View */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -704,6 +727,7 @@
 				B8630FEC2AD4347800C97F73 /* Poppins-ExtraBold.ttf in Resources */,
 				B8630FF32AD4347800C97F73 /* Poppins-Bold.ttf in Resources */,
 				B8630FFA2AD4347800C97F73 /* Poppins-Thin.ttf in Resources */,
+				B895D8082AF52CB8003458E5 /* DetailCollectionViewCell.xib in Resources */,
 				B8630FBF2AD34E9500C97F73 /* Assets.xcassets in Resources */,
 				B8630FEB2AD4347800C97F73 /* Poppins-BlackItalic.ttf in Resources */,
 				B8630FEA2AD4347800C97F73 /* Poppins-ExtraBoldItalic.ttf in Resources */,
@@ -743,6 +767,7 @@
 				B866B8612AE1EF2800FF8D0C /* FoodResponseModel.swift in Sources */,
 				B86310042AD854D100C97F73 /* UIColor+Ext.swift in Sources */,
 				B82762272ADD6EFB001278DB /* CartResponseModel.swift in Sources */,
+				B895D8072AF52CB8003458E5 /* DetailCollectionViewCell.swift in Sources */,
 				B82762252ADD6EA5001278DB /* CardModel.swift in Sources */,
 				B8630FB62AD34E9300C97F73 /* AppDelegate.swift in Sources */,
 				B88F6B4B2ADAE9E800DD5596 /* NetworkService.swift in Sources */,

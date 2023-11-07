@@ -194,12 +194,10 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            let meals = mealsModel?[indexPath.item]
-            let name = meals?.name
-            let price = meals?.price
-            let id = meals?.imageName
-           
-            cell.setCell(price: price ?? "", name: name ?? "",id: id ?? "")
+            if let foodItem = mealsModel?[indexPath.item] {
+                cell.setCell(foodItem: foodItem)
+                cell.delegate = self
+            }
             return cell
         }
     }
@@ -260,5 +258,29 @@ extension HomeController: MealsResponseProtocol {
     func mealsFail(error: String) {
         print(error)
         hideSpinner()
+    }
+}
+
+// MARK: - CellAddCartDelegate
+extension HomeController: MenuCellDelegate {
+    func addMealToCart(foodItem: Food) {
+        viewModel.addMealToCart(
+            mealName: foodItem.name ?? "",
+            mealImageName: foodItem.imageName ?? "",
+            mealPrice: String(foodItem.price ?? ""),
+            mealOrderQuantity: "1",
+            username: Constants.shared.username ?? ""
+        ) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let cartResponse):
+                    print("Sepete eklendi: \(cartResponse)")
+                    self?.showToast(message: "\(foodItem.name ?? "") Sepete Eklendi. ☑️")
+                case .failure(let error):
+                    print("Sepete eklenemedi: \(error)")
+                    self?.showAlert(title: "Error!", message: "\(error)")
+                }
+            }
+        }
     }
 }

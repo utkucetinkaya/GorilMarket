@@ -15,15 +15,9 @@ class DetailViewModel {
     let repository = MealsRepository.shared
     
     // MARK: - AddMealToCart
-    func addMealToCart(mealName: String, mealImageName: String, mealPrice: String, mealOrderQuantity: String, username: String) {
- 
+    func addMealToCart(mealName: String, mealImageName: String, mealPrice: String, mealOrderQuantity: String, username: String, completion: @escaping (Result<CartResponse, Error>) -> Void) {
         repository.addMealToCart(mealName: mealName, mealImageName: mealImageName, mealPrice: mealPrice, mealOrderQuantity: mealOrderQuantity, username: username) { result in
-            switch result {
-            case .success(let cartResponse):
-                self.cartResponse = cartResponse
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+            completion(result)
         }
     }
 }

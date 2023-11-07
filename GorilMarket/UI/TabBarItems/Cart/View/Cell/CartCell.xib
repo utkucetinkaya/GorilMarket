@@ -33,57 +33,78 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MbL-bF-dkA">
                         <rect key="frame" x="35" y="0.0" width="416" height="187"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2f6-rF-qbz">
-                                <rect key="frame" x="128" y="40" width="108.66666666666669" height="107"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1h-d8-yJo">
-                                        <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="61"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                                        <color key="textColor" name="SecondaryColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ücretsiz Gönderim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXV-F9-ySc">
-                                        <rect key="frame" x="0.0" y="61" width="108.66666666666667" height="46"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
-                                        <color key="textColor" systemColor="systemGray2Color"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5m-uc-7bi">
                                 <rect key="frame" x="0.0" y="0.0" width="120" height="187"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="M2j-Xb-feV"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4TO-q0-ioY">
-                                <rect key="frame" x="128" y="152" width="75.666666666666686" height="24"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-Md-ehB">
+                                <rect key="frame" x="130" y="50" width="266" height="87"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₺3,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snZ-me-ZzM">
-                                        <rect key="frame" x="0.0" y="0.0" width="50.333333333333336" height="24"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdn-BR-LTr">
-                                        <rect key="frame" x="70.333333333333343" y="0.0" width="5.3333333333333286" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1h-d8-yJo">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="29"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="SecondaryColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ücretsiz Gönderim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXV-F9-ySc">
+                                        <rect key="frame" x="0.0" y="29" width="108.66666666666667" height="29"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="12"/>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4TO-q0-ioY">
+                                        <rect key="frame" x="0.0" y="58" width="75.666666666666671" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₺3,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snZ-me-ZzM">
+                                                <rect key="frame" x="0.0" y="0.0" width="50.333333333333336" height="29"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdn-BR-LTr">
+                                                <rect key="frame" x="70.333333333333343" y="0.0" width="5.3333333333333286" height="29"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteButton" translatesAutoresizingMaskIntoConstraints="NO" id="w4c-ky-nFE">
+                                <rect key="frame" x="366" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="82f-U2-cfc"/>
+                                    <constraint firstAttribute="width" constant="30" id="x5P-YI-F0c"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-5G-7EX">
+                                <rect key="frame" x="366" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1G7-9e-O3f"/>
+                                    <constraint firstAttribute="width" constant="30" id="aDY-ju-f3E"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PuE-G8-lJw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93667876719999998" green="0.95209974050000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2f6-rF-qbz" firstAttribute="top" secondItem="MbL-bF-dkA" secondAttribute="top" constant="40" id="6OP-re-tup"/>
-                            <constraint firstItem="2f6-rF-qbz" firstAttribute="leading" secondItem="o5m-uc-7bi" secondAttribute="trailing" constant="8" id="R1l-S9-qAb"/>
+                            <constraint firstAttribute="trailing" secondItem="w4c-ky-nFE" secondAttribute="trailing" constant="20" id="Epk-vn-rGT"/>
+                            <constraint firstItem="DrS-5G-7EX" firstAttribute="top" secondItem="MbL-bF-dkA" secondAttribute="top" constant="20" id="Ktl-5Z-Gkg"/>
+                            <constraint firstAttribute="bottom" secondItem="mK9-Md-ehB" secondAttribute="bottom" constant="50" id="MdW-qO-JM7"/>
                             <constraint firstItem="o5m-uc-7bi" firstAttribute="top" secondItem="MbL-bF-dkA" secondAttribute="top" id="Wtj-he-Lq4"/>
-                            <constraint firstItem="2f6-rF-qbz" firstAttribute="centerY" secondItem="MbL-bF-dkA" secondAttribute="centerY" id="X0F-em-pDu"/>
-                            <constraint firstItem="4TO-q0-ioY" firstAttribute="top" secondItem="2f6-rF-qbz" secondAttribute="bottom" constant="5" id="YGO-N7-LGo"/>
                             <constraint firstItem="o5m-uc-7bi" firstAttribute="leading" secondItem="MbL-bF-dkA" secondAttribute="leading" id="apS-Vn-Co7"/>
                             <constraint firstAttribute="bottom" secondItem="o5m-uc-7bi" secondAttribute="bottom" id="ehC-he-eSH"/>
-                            <constraint firstItem="4TO-q0-ioY" firstAttribute="leading" secondItem="o5m-uc-7bi" secondAttribute="trailing" constant="8" id="g0P-L1-gpT"/>
+                            <constraint firstItem="mK9-Md-ehB" firstAttribute="leading" secondItem="o5m-uc-7bi" secondAttribute="trailing" constant="10" id="lLU-l7-jyJ"/>
+                            <constraint firstAttribute="trailing" secondItem="mK9-Md-ehB" secondAttribute="trailing" constant="20" id="pPO-MA-snu"/>
+                            <constraint firstItem="w4c-ky-nFE" firstAttribute="top" secondItem="MbL-bF-dkA" secondAttribute="top" constant="20" id="qjE-46-ADh"/>
+                            <constraint firstItem="mK9-Md-ehB" firstAttribute="top" secondItem="MbL-bF-dkA" secondAttribute="top" constant="50" id="yUC-Og-pEc"/>
+                            <constraint firstAttribute="trailing" secondItem="DrS-5G-7EX" secondAttribute="trailing" constant="20" id="ycg-JI-bhK"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -107,6 +128,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="deleteButton" width="128" height="128"/>
         <namedColor name="SecondaryColor">
             <color red="0.046000000089406967" green="0.061000000685453415" blue="0.12800000607967377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
