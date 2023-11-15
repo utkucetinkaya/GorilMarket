@@ -53,6 +53,8 @@ https://github.com/utkucetinkaya/GorilMarket/assets/61903359/6d25337c-92d7-4a7c-
 - Singleton Pattern
 - Generic Network Layer
 - Swift Package Manager
+- Delegation Pattern
+- OOP
 
 
 
